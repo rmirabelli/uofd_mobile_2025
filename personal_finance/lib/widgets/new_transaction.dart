@@ -8,12 +8,13 @@ class NewTransaction extends StatelessWidget {
   final TextEditingController amountController;
   final Function(String, int) _addTransaction;
 
-  void _submitTransaction() {
+  void _submitTransaction(BuildContext context) {
     final enteredTitle = titleController.text;
     final enteredAmount = (double.parse(amountController.text) * 100).toInt();
     if (enteredTitle.isEmpty || enteredAmount < 0) return;
 
     _addTransaction(enteredTitle, enteredAmount);
+    Navigator.of(context).pop();
   }
 
   @override
@@ -30,19 +31,19 @@ class NewTransaction extends StatelessWidget {
               keyboardType: TextInputType.text,
               decoration: InputDecoration(labelText: "Title"),
               controller: titleController,
-              onSubmitted: (_) => {_submitTransaction()},
+              onSubmitted: (_) => {_submitTransaction(context)},
               onTapOutside: (_) => {FocusManager.instance.primaryFocus?.unfocus()},
             ),
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(labelText: "amount"),
               controller: amountController,
-              onSubmitted: (_) => {_submitTransaction()},
+              onSubmitted: (_) => {_submitTransaction(context)},
               onTapOutside: (_) => {FocusManager.instance.primaryFocus?.unfocus()},
             ),
             ElevatedButton(
               onPressed: () {
-                _submitTransaction();
+                _submitTransaction(context);
               },
               child: Text("submit"),
             ),

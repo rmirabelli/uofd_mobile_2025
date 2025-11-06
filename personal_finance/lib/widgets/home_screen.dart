@@ -16,9 +16,19 @@ class _HomeScreenState extends State<HomeScreen> {
   final amountController = TextEditingController();
 
   final List<Transaction> _userTransactions = [
-    Transaction(id: UniqueKey().toString(), title: "new shoes", amountInPennies: 5299),
+    Transaction(id: UniqueKey().toString(), title: "New shoes", amountInPennies: 5299),
     Transaction(id: UniqueKey().toString(), title: "Groceries", amountInPennies: 8876),
     Transaction(id: UniqueKey().toString(), title: "Coffee", amountInPennies: 478),
+    Transaction(id: UniqueKey().toString(), title: "Books", amountInPennies: 2564),
+    Transaction(id: UniqueKey().toString(), title: "Cat food", amountInPennies: 6467),
+    Transaction(id: UniqueKey().toString(), title: "Poetry", amountInPennies: 123),
+    Transaction(id: UniqueKey().toString(), title: "Broom", amountInPennies: 1414),
+    Transaction(id: UniqueKey().toString(), title: "TV Subscription", amountInPennies: 1999),
+    Transaction(id: UniqueKey().toString(), title: "Candy", amountInPennies: 2057),
+    Transaction(id: UniqueKey().toString(), title: "Shirt", amountInPennies: 4077),
+    Transaction(id: UniqueKey().toString(), title: "Notebook", amountInPennies: 1298),
+    Transaction(id: UniqueKey().toString(), title: "Wildflowers", amountInPennies: 79),
+    Transaction(id: UniqueKey().toString(), title: "Perfume", amountInPennies: 1478),
   ];
 
   void _addNewTransaction(String title, int amount) {
