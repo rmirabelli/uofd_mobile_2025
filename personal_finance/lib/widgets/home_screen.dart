@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final amountController = TextEditingController();
 
   final List<Transaction> _userTransactions = [
-    Transaction(id: UniqueKey().toString(), title: "New shoes", amountInPennies: 5299),
+    Transaction(id: UniqueKey().toString(), title: "Shoes", amountInPennies: 5299),
     Transaction(id: UniqueKey().toString(), title: "Groceries", amountInPennies: 8876),
     Transaction(id: UniqueKey().toString(), title: "Coffee", amountInPennies: 478),
     Transaction(id: UniqueKey().toString(), title: "Books", amountInPennies: 2564),
@@ -29,6 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
     Transaction(id: UniqueKey().toString(), title: "Notebook", amountInPennies: 1298),
     Transaction(id: UniqueKey().toString(), title: "Wildflowers", amountInPennies: 79),
     Transaction(id: UniqueKey().toString(), title: "Perfume", amountInPennies: 1478),
+    Transaction(id: UniqueKey().toString(), title: "Sailor hat", amountInPennies: 2983),
+    Transaction(id: UniqueKey().toString(), title: "Explosives", amountInPennies: 1999),
+    Transaction(id: UniqueKey().toString(), title: "Compact disc", amountInPennies: 878),
+    Transaction(id: UniqueKey().toString(), title: "Stuffed dolphin", amountInPennies: 3987),
+    Transaction(id: UniqueKey().toString(), title: "Canned tuna", amountInPennies: 1100),
+    Transaction(id: UniqueKey().toString(), title: "Bucket", amountInPennies: 555),
+    Transaction(id: UniqueKey().toString(), title: "Lasso", amountInPennies: 1276),
+    Transaction(id: UniqueKey().toString(), title: "Dance trophy", amountInPennies: 9765),
+    Transaction(id: UniqueKey().toString(), title: "Air freshener", amountInPennies: 1429),
+    Transaction(id: UniqueKey().toString(), title: "Lego", amountInPennies: 1356),
   ];
 
   void _addNewTransaction(String title, int amount) {
