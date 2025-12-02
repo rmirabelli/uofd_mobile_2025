@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_finance/widgets/new_transaction.dart';
-import 'package:personal_finance/widgets/user_transaction.dart';
-import 'models/transaction.dart';
-import 'widgets/transaction_card.dart';
-import 'widgets/transaction_list.dart';
+import 'package:personal_finance/widgets/home_screen.dart';
 
 void main() {
   runApp(MainApp());
@@ -14,18 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Personal Finance')),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Card(child: Text('chart')),
-            UserTransaction(),
-          ],
-        ),
-      ),
-    );
+    return MaterialApp(home: HomeScreen());
   }
 }

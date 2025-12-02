@@ -19,7 +19,7 @@ class TransactionCard extends StatelessWidget {
             ),
             margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
             child: Text(
-              '\$${transaction.amountInPennies / 100}',
+              '\$${(transaction.amountInPennies / 100).toStringAsFixed(2)}',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
           ),
